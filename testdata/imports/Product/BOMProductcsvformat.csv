@@ -1,0 +1,3 @@
+Sequence Code,Product Name,Product Type,Barcode,Product Description,Purchase Price,Sales Price,Purchase Account Name,Sales Account Name,Purchase Price Tax Inclusive,Sales Price Tax Inclusive,Unit Of Measurement,Opening Quantity,Opening Valuation,Cost of Goods Sold - Account Name,Inventory Account Name,Stock Adjustment Account Name,Manufacturing Account,Component Product ID,Component Product Quantity,Additional Cost Name,Additional Cost Amount
+,Engineering bill of materials,BILL_OF_MATERIALS,,Engineering bill of materials,2000,2500,Purchases,Sales,FALSE,FALSE,UNIT,100,500,Cost of Goods Sold,Inventory,Inventory Adjustment,Manufacturing cost,,,,
+,,,,,,,,,,,,,,,,,,P-00000001,1,Labour Charges,100

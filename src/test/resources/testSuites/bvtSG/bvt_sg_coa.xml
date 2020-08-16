@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
+
+<suite thread-count="1" name="ERP Web COA Test Suite"
+	parallel="false" preserve-order="true">
+
+	<listeners>
+		<listener
+			class-name="deskera.web.automation.core.TestListenerOnFailure">
+		</listener>
+	</listeners>
+	<parameter name="browser" value="chrome"></parameter>
+	<!-- <parameter name="url" value="https://auth-qa.deskera.xyz/auth/signin?redirectUrl=https:%2F%2Freality-qa.deskera.xyz"></parameter> -->
+	<!-- System config for framework -->
+	<parameter name="envConf"
+		value="src/test/resources/systemConfig/environment.config"></parameter>
+
+	<!-- <parameter name="singUpUrl" value="https://auth-qa.deskera.xyz/auth/signup"></parameter> -->
+	<!-- Run Test Cases -->
+	<parameter name="confCommon"
+		value="src/test/resources/bvtSGConfig/Common.config"></parameter>
+
+
+
+
+	<test name="1 Sign Up without Phone Number test" parallel="false">
+		<classes>
+			<class name="deskera.web.automation.erp.bvtSG.tests.SignUpTest">
+				<methods>
+					<include name="testSignUpWithoutPhoneNumber"></include>
+				</methods>
+			</class>
+		</classes>
+	</test>
+	<test name="2 Create Organization" parallel="false">
+		<classes>
+			<class name="deskera.web.automation.erp.bvtSG.tests.LoginTest">
+				<methods>
+					<include name="loginTest"></include>
+				</methods>
+			</class>
+			<class
+				name="deskera.web.automation.erp.bvtSG.tests.CreateOrganizationTest">
+			</class>
+		</classes>
+	</test>
+	<test name="3 Add COA" parallel="false">
+
+		<classes>
+			<class name="deskera.web.automation.erp.bvtSG.tests.LoginTest">
+				<methods>
+					<include name="loginTest"></include>
+				</methods>
+			</class>
+			<class
+				name="deskera.web.automation.erp.coa.tests.ChartOfAccountsTest">
+				<methods>
+					<parameter name="conf"
+						value="src/test/resources/bvtSGConfig/TestDataCOASG.config"></parameter>
+					<include name="addChartOfAccounts"></include>
+
+				</methods>
+			</class>
+		</classes>
+	</test>
+
+	<test name="4 Edit COA" parallel="false">
+		<classes>
+			<class name="deskera.web.automation.erp.bvtSG.tests.LoginTest">
+				<methods>
+					<include name="loginTest"></include>
+				</methods>
+			</class>
+
+			<class
+				name="deskera.web.automation.erp.coa.tests.EditChartOfAccountsTest">
+				<methods>
+					<parameter name="conf"
+						value="src/test/resources/bvtSGConfig/TestDataCOASG.config"></parameter>
+					<include name="editChartOfAccounts"></include>
+				</methods>
+			</class>
+		</classes>
+	</test>
+
+	<test name="5 Deactiavate COA" parallel="false">
+		<classes>
+			<class name="deskera.web.automation.erp.bvtSG.tests.LoginTest">
+				<methods>
+					<include name="loginTest"></include>
+				</methods>
+			</class>
+
+			<class
+				name="deskera.web.automation.erp.coa.tests.DeactivateChartOfAccountsTest">
+				<methods>
+					<parameter name="conf"
+						value="src/test/resources/bvtSGConfig/TestDataCOASG.config"></parameter>
+					<include name="deactivateChartOfAccounts"></include>
+				</methods>
+			</class>
+		</classes>
+	</test>
+
+</suite> 

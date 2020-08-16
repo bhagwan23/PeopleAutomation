@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
+<suite thread-count="1" name="ERP Web BVT Test Suite - SG"
+	parallel="false" preserve-order="true">
+
+	<suite-files>
+
+		<suite-file
+			path="src/test/resources/testSuites/bvtSG/bvt_sg_contacts.xml"></suite-file>
+		<suite-file
+			path="src/test/resources/testSuites/bvtSG/bvt_sg_products.xml"></suite-file>
+		<suite-file
+			path="src/test/resources/testSuites/bvtSG/bvt_sg_buy.xml"></suite-file>
+		<suite-file
+			path="src/test/resources/testSuites/bvtSG/bvt_sg_sell.xml"></suite-file>
+		<suite-file
+			path="src/test/resources/testSuites/bvtSG/bvt_sg_import.xml"></suite-file>
+		<suite-file
+			path="src/test/resources/testSuites/bvtSG/bvt_sg_coa.xml"></suite-file>
+	</suite-files>
+
+
+</suite> 

@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
+
+<suite thread-count="1" name="ERP Web Contacts Test Suite"
+	parallel="false" preserve-order="true">
+
+	<listeners>
+		<listener
+			class-name="deskera.web.automation.core.TestListenerOnFailure">
+		</listener>
+	</listeners>
+	<parameter name="browser" value="chrome"></parameter>
+	<parameter name="envConf"
+		value="src/test/resources/systemConfig/environment.config"></parameter>
+	<parameter name="confCommon"
+		value="src/test/resources/bvtSGConfig/Common.config"></parameter>
+	<parameter name="confProducts"
+		value="src/test/resources/bvtSGConfig/TestDataProductSG.config"></parameter>
+	<parameter name="confContacts"
+		value="src/test/resources/bvtSGConfig/TestDataContactSG.config"></parameter>
+	<parameter name="confBuy"
+		value="src/test/resources/bvtSGConfig/TestDataBuySG.config"></parameter>
+	<parameter name="confSell"
+		value="src/test/resources/bvtSGConfig/TestDataSellSG.config"></parameter>
+
+
+
+
+	<test name="1 Sign Up without Phone Number test" parallel="false">
+	<classes>
+		<class name="deskera.web.automation.erp.bvtSG.tests.SignUpTest">
+			<methods>
+				<include name="testSignUpWithoutPhoneNumber"></include>
+			</methods>
+		</class>
+	</classes>
+</test>
+	<test name="2 Sign In" parallel="false">
+		<classes>
+			<class name="deskera.web.automation.erp.bvtSG.tests.LoginTest">
+			</class>
+		</classes>
+	</test>
+	<test name="3 Create Organization" parallel="false">
+		<classes>
+		<class name="deskera.web.automation.erp.bvtSG.tests.LoginTest">
+				<methods>
+					<include name="loginTest"></include>
+				</methods>
+			</class>
+			<class
+				name="deskera.web.automation.erp.bvtSG.tests.CreateOrganizationTest">
+			</class>
+		</classes>
+	</test>
+
+
+	<test name="1 C20261 Add Contacts" parallel="false">
+
+		<classes>
+			<class name="deskera.web.automation.erp.bvtSG.tests.LoginTest">
+				<methods>
+					<include name="loginTest"></include>
+				</methods>
+			</class>
+
+			<class
+				name="deskera.web.automation.erp.bvtSG.tests.ContactsTest">
+				<methods>
+					<include name="addContacts"></include>
+					<include name="addContacts1"></include>
+				</methods>
+			</class>
+		</classes>
+	</test>
+
+	<test name="2 C20261 Edit Contacts" parallel="false">
+		<classes>
+			<class name="deskera.web.automation.erp.bvtSG.tests.LoginTest">
+				<methods>
+					<include name="loginTest"></include>
+				</methods>
+			</class>
+
+			<class
+				name="deskera.web.automation.erp.bvtSG.tests.EditContactTest">
+				<methods>
+					<include name="editContacts"></include>
+				</methods>
+			</class>
+		</classes>
+	</test>
+
+
+
+	<test name="3 C20261 Copy Contacts" parallel="false">
+		<classes>
+			<class name="deskera.web.automation.erp.bvtSG.tests.LoginTest">
+				<methods>
+					<include name="loginTest"></include>
+				</methods>
+			</class>
+			<class
+				name="deskera.web.automation.erp.bvtSG.tests.CopyContactTest">
+				<methods>
+					<include name="copyContacts"></include>
+				</methods>
+			</class>
+		</classes>
+	</test>
+
+	<test name="4  C20261 Delete Contacts" parallel="false">
+		<classes>
+			<class name="deskera.web.automation.erp.bvtSG.tests.LoginTest">
+				<methods>
+					<include name="loginTest"></include>
+				</methods>
+			</class>
+			<class
+				name="deskera.web.automation.erp.bvtSG.tests.DeleteContactTest">
+				<methods>
+					<include name="deleteContacts"></include>
+				</methods>
+			</class>
+		</classes>
+	</test>
+
+	<test name="5 C20261 Create Custom Number Format" parallel="false">
+		<classes>
+			<class name="deskera.web.automation.erp.bvtSG.tests.LoginTest">
+				<methods>
+					<include name="loginTest"></include>
+				</methods>
+			</class>
+			<class
+				name="deskera.web.automation.erp.bvtSG.tests.CustomNumberFormatTest">
+				<methods>
+					<include name="customNumberFormat"></include>
+				</methods>
+			</class>
+		</classes>
+	</test>
+
+
+</suite> 

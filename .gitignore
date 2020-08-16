@@ -1,0 +1,15 @@
+.classpath
+.project
+.settings/
+target/
+DESKERA.API_AUTOMATION_SUITE.userlibraries
+.idea/
+.allure/
+allure-results/
+run_Singapore_ERPSales.bat/
+/bin/
+*.log
+*.bat
+test-output/
+*.Bat
+Run.Bat

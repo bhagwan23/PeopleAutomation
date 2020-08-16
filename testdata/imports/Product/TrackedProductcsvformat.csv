@@ -1,0 +1,2 @@
+Sequence Code,Product Number,Product Name,Product Type,Barcode,Product Description,Purchase Account Name,Sales Account Name,Purchase Tax Code,Sales Tax Code,Unit Of Measurement,Opening Quantity,Opening Valuation,Cost of Goods Sold - Account Name,Inventory Account Name,Stock Adjustment Account Name
+,Product-100,Gold Earrings Copy,TRACKED,1.12E+11,Gold Earrings,Purchases,Sales,TX-RE (7%),SR (7%),UNIT,100,500,Cost of Goods Sold,Inventory,Inventory Adjustment
